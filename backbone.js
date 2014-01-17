@@ -1498,7 +1498,7 @@
       // Strip the hash for matching.
       fragment = fragment.replace(pathStripper, '');
 
-      if (this.fragment === fragment) return;
+      if (!options.force && this.fragment === fragment) return;
       this.fragment = fragment;
 
       // Don't include a trailing slash on the root.
